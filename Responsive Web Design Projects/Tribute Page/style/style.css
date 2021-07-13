@@ -1,0 +1,39 @@
+body{
+  grid-template-rows: 100px;
+  font-family: georgia;
+  background-color: rgb(232, 111, 100);
+}
+
+img{
+ border-color: black;
+ border-style: dotted;
+ border-width: 5px;
+ max-width: 500px;
+ position: relative;
+ display: block;
+ margin-left: auto;
+ margin-right: auto;
+}
+
+#headline{
+ text-align: center;
+ font-family: georgia;
+}
+
+li{
+  font-family: georgia;
+}
+
+#img-caption{
+  text-align: center;
+}
+
+#tribute-info{
+ border-color: black;
+ border-style: dotted;
+ border-width: 5px;
+}
+
+#tribute-link{
+  color: blue;
+}

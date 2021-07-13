@@ -1,0 +1,81 @@
+html{
+    background: linear-gradient(135deg, #5881c7, #2b436e); 
+  }
+  
+  #title{
+    text-align: center;
+  }
+  
+  nav{
+    display: block;
+    font-family: georgia;
+  }
+  
+  .nav-link{
+      color: black;
+      display: block;
+      list-style-type: disc;
+      margin-block-start: 1em;
+      margin-block-end: 1em;
+      margin-inline-start: 0px;
+      margin-inline-end: 0px;
+      padding-inline-start: 40px;
+    padding: 0;
+      overflow-y: auto;
+      overflow-x: hidden;
+      border: 1px solid;
+      height: 20px;
+    text-align: center;
+  }
+  
+
+
+  code{
+    display: block;
+      text-align: left;
+      white-space: pre-line;
+      position: static;
+      word-break: normal;
+      word-wrap: normal;
+      line-height: 2;
+      background-color: #9eb9e6;
+      padding: 15px;
+      margin: 10px;
+      border-radius: 1px;
+  }
+  
+  #main-doc{
+      position: static;
+      margin-left: 310px;
+      padding: 20px;
+      margin-bottom: 110px;
+  }
+  
+  @media screen and (min-width: 480px){
+    #navbar{
+        position: fixed;
+            min-width: 290px;
+            top: 0px;
+            left: 0px;
+            width: 200px;
+            height: 100%;
+            border-right: solid;
+            border-color: rgba(0, 22, 22, 0.4);
+            background: linear-gradient(90deg, #becce6, #b4b8bf);
+            color: black;
+        }
+  }
+  
+  #answer{
+    color: #888888;
+  }
+  
+  h1, p, ul, ol, h3{
+    font-family: "Helvetica", georgia;
+    background-color: #5881c7;
+    color: white;
+  }
+  
+  #space{
+    height: 10px;
+  }

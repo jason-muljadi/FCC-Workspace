@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <link rel = "stylesheet" href = "style/style.css">
+  <nav id="navbar">
+    <header id="title"> <strong>Operation: Learn R</strong></header>
+    <p></p>
+   
+      <a class="nav-link" href="#What_Is_R?">What is R?</a> 
+     <a class="nav-link"  href="#Obtaining_R">Obtaining R</a>
+      <a class="nav-link"   href="#R_Operators">R Operators</a>
+      <a class="nav-link"  href="#VaRiables">VaRiables</a>
+      <a class="nav-link"   href="#R_Functions">R Functions</a>
+    
+  </nav>
+  <main id="main-doc">
+    <section class="main-section" id="What_Is_R?">
+      <header>
+        <h1> What is R? </h1>
+        </header>
+      <article>
+        <p></p>
+        <p>R is an free and open-source programming language that is used for statistical computation. Some examples of industries that utilize the R language include:</p>
+        <ul>
+          <li>Data Mining</li>
+          <li>Academic Research</li>
+          <li>Financial Services</li>
+        </ul>
+        <p>Here is a simple example of what R looks like. We utilize the print function of R to make our computer say "Hi" to us (and to the whole world!).</p>
+        <code> x <- "Hello World"
+          print(x) //this will print out "Hello World" </code>
+        <p>Below is an introduction by Basecamp to what R is like. Watch the video in order to get the basics before we begin our journey into R.</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/SWxoJqTqo08" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </article>
+    </section>
+    <section class="main-section" id="Obtaining_R">
+      <header>
+        <h1> Obtaining R </h1>
+      </header>
+      <article>
+        <p>To get started, we need to obtain two things: R and RStudio. Follow these instructions.</p>
+        <ol>
+          <li>Install R by using a CRAN mirror, <a href="https://cran.r-project.org/mirrors.html">https://cran.r-project.org/mirrors.html</a> where you will get the R console onto your computer.</li>
+          <li>Go to <a href="https://www.rstudio.com/">https://www.rstudio.com/</a> to get your R workspace (this is a very helpful tool that you should utilize for all your R projects).</li>
+          <li>Make sure that you have all of the programs up to date. Alternatively, you can use a program such as <a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a> or even codepen.io in order to code in R.</li>
+        </ol>
+        <p></p>
+      </article>
+    </section>
+    <section class="main-section" id="R_Operators">
+      <header>
+        <h1> R Operators </h1>
+        </header>
+      <article>
+        <p>R is used for statistical modeling and for computing any sort of dataset. It is a flexible language that allows even the most unsavviest tech person to pick up the syntax. The first thing to understand about the language is how R allows for operations to occur. Think of R as a simple calculator and you will be able to get the answer from the program. Look below to see five basic mathematical functions and how it is expressed and answered in R.</p>
+       
+        <code># Addition
+          3+5
+          <div id="answer">[1] 8</div>
+          
+          # Subtraction
+          726-65
+          <div id="answer">[1] 661</div>
+          
+          # Multiplication
+192857983*182
+          <div id="answer">[1] 35100152906</div>
+          
+          # Division
+2456123/76
+          <div id="answer">[1] 32317.41</div>
+          
+          # Exponential Functions
+7^2
+          <div id="answer">[1] 49</div>
+        </code>
+         <p>As a reference, R utilizes "#" to comment in a line of code. This is important to utilize when you are working on something and you need notes to strengthen your workflow.</p>
+        <code># I am writing this comment to help me with the code below
+        [insert really hard code here]
+        </code>
+        <p>For now, keep in mind these basic operator values, as they will assist you later on when dealing with if/then statements and other forms of logical operations.</p>
+      </article>
+    </section>
+    <section class="main-section" id="VaRiables">
+      <header>
+        <h1> VaRiables </h1>
+        </header>
+      <article>
+        <p>Like every programming language, R has a distinct way in order to create variables. A variable is a storage location that is associated with a symbolic name that allows the programmar to obtain and remember the value in a much simpler format. For instance:</p> 
+        <code> x <- 4:23 # This allows us to create a complex numeric vector utilizing numbers that we typically do not tabulate.
+y <- x^4 # A vector will be formed based on the values that we get from x.
+          print(y) # The <strong>print</strong> function will allow us to print the value of the vector we created. We'll talk more about functions in the next section.
+          
+ # Output
+ <div id="answer">[1]    256    625   1296   2401   4096   6561  10000  14641  20736  28561
+   [11]  38416  50625  65536  83521 104976 130321 160000 194481 234256 279841</div></code>
+        <p>Even in simple operations, we can utilize variables that will allow us to get the value that we are looking for. Variables will become much more important the more data analysis we will have to do. Take from example a part of a code taken in a Life Sciences statistical analysis class that I have taken</p>
+        <code> obs_fit <- lm(temp ~ spot, data = ireland)
+ slopes <- numeric(500)
+ set.seed(572)
+for (i in 1:2000){
+ hrtrate_shuffle_i <- sample(ireland$hrtrate)
+ fit_i <- lm(temp ~ spot_shuffle_i, data = ireland)
+ slopes[i] <- fit_i$coefficients[2]
+ }
+mean(slopes >= obs_fit$coefficients[2] | slopes <= -obs_fit$coefficients[2] )
+                                                                          # Output
+                                                                            <div id="answer">[1] 0.0025 </div>
+</code>
+        <p>We can see how we created two variables, <strong><i>obs_fit</i></strong> and <strong><i>slopes</i></strong> in order to insert them into a for loop with different mathematical expressions and logical arguments to get our value of 0.0025. While in the beginning it may seem difficult to utilize variables, it is important to get the logic behind the creation of such tools in order to assist you on the R journey in front of you!</p>
+      </article>
+    </section>
+    <section class="main-section" id="R_Functions">
+      <header>
+        <h1> R Functions </h1>
+        </header>
+      <article>
+        <p>There are other functions in R that will help you for the beginning. Play around with them as you delve deeper into R. Remember, R is your playground, and you are allowed to utilize it in whatever way you like!</p>
+        <p>While it is technically possible to insert the dataset as is with the following functions, it is good practice to be able to turn the datasets into variables instead. When working with multiple lines of code, this will be more clear and less mistakes will be made!</p>
+        <div id="space"></div>
+        <h3>Getting A Package</h3>
+        <p> The wonderful aspect of R being free is that there is a huge open-source community that constantly creates new features and functionalities that is not included in the R language. In order to implement these new packages, we utilize the "library" function. 
+        </p>
+        <code>library(x)</code>
+        <p>It's important that you utilize this function whenever you start a new project. Everytime you open a new project, the settings of your R workspace may default back to the basic R functions. Therefore, a good practice to have is to start with the "library" function.</p>
+        <div id="space"></div>
+        <h3>Finding the Total Sum</h3>
+        <p> 
+          Perhaps that you have a dataset that you just need to find the total sum of. If you express the dataset as a variable (for our example, we will utilize "x"), R will be able to tell you the total sum of the dataset!
+        </p>
+        <code>sum(x)</code>
+<div id="space"></div>
+        <h3>Finding Linear Correlation</h3>
+        <p> Perhaps you're a data scientist and you want to find a linear correlation between two datasets that are expressed in two variables. These datasets can also be matrices or data frames. In all cases, you can utilize the "cor" function to find the linear relationship (or a correlation matrices if it's data frames or matrices) between the two variables.
+        </p>
+        <code>cor(x, y)</code>
+ <div id="space"></div>       
+        <h3>Expressing Datasets on a 2-D X-Y graph</h3>
+        <p> 
+          Let's take it one step further and plot the linear relationship on a 2-D graph. R allows you to do that by using the "plot" function. Simply express the datasets as two variables and then you are able to use the function.
+        </p>
+        <code>plot(x, y) </code>
+ <div id="space"></div>       
+        <h3>Plotting Histograms</h3>
+        <p> 
+           We can plot histograms in R by using the "hist" function. We first need to define a dataset by using a variable. Once we obtain the variable, we then use the "hist" function.
+        </p>
+        <code>hist(x)</code>
+      </article>
+    </section>
+  </main>
+</html>

@@ -1,0 +1,66 @@
+#header{
+    position: fixed;
+    width: 100%;
+    min-height: 75px;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(250, 203, 203);
+  
+  }
+  
+  #header-img
+  {
+    display:flex;
+    height: 100px;
+    width: 100px;
+  }
+  
+  body{
+  background-image: url(https://www.myfreetextures.com/wp-content/uploads/2014/10/sun-light-on-water.jpg);
+  }
+  
+  a{
+    color: blue;
+  }
+  
+  nav{
+      margin-top: 10px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 0 50px;
+  }
+  
+  section{
+   font-family: "brandon-grotesque", sans-serif;
+   font-weight: 400;
+   font-style: normal;
+    background-color: rgba(250, 203, 203, 0.8);
+  }
+  
+  h1{
+    justify-content: center;
+    font-family: "brandon-grotesque", sans-serif;
+   font-weight: 400;
+   font-style: normal;
+   background-color: rgba(250, 203, 203, 0.8);
+  }
+  
+  #container{
+  height: 100px;
+  background-color: rgba(250, 203, 203, 0.8);
+  }
+  
+  @media screen and (min-width: 480px){
+    nav{
+        margin-top: 10px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0 50px;
+    }
+}

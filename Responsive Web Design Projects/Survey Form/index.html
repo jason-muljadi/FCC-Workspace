@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <header>
+      <meta charset="utf-8">
+<link rel = "stylesheet" href = "style/style.css">
+  </header>
+  <body>
+ <h1 id="title">
+   <strong>Survey Form by Jason</strong>
+</h1>
+   <p id="description">
+     <i>This is a survey of how your summer has been going thus far!</i>
+  </p>
+<form id="survey-form">
+    <input id="name" type="text" required placeholder="Name">
+      <label id="name-label">
+      Name
+  </label>
+  <div></div>
+      <input id="email" type="email" required placeholder="Email">
+    <label id="email-label">
+      Email
+  </label>
+   <div></div>
+      <input id="number" type="number" required placeholder="Number" min="1" max="10">
+   <label id="number-label">
+      Choose a number to rate your summer has been! "1" being "Terrible" and "10" being "Best Summer Ever!"
+  </label>
+  <div></div>
+  <select id="dropdown" name="year">
+          <option disabled selected value> Year in University</option>
+    <option value="first-year">First Year</option>
+        <option value="second-year">Second Year</option>
+        <option value="third-year">Third Year</option>
+        <option value="fourth-year">Fourth Year</option>
+        <option value="alumni">Alumni</option>
+          </select>
+  <p>Are you hesitant about returning back to campus this upcoming school year?</p>
+    <div id="backToSchool">
+          <input value="yes" type="radio" name="b2s">
+  <label for="yes">Yes</label>
+      <input value="maybe" type="radio" name="b2s">
+  <label for="maybe">Maybe</label>
+      <input value="no" type="radio" name="b2s">
+  <label for="no">No</label>
+    </div>
+  
+  <div id="summerInterests">
+    <p> What have you been doing over the summer? </p>
+    <label for="classes"><input value="classes" type="checkbox" name="activities"> Summer School Classes</label>
+    <label for="internship"><input value="internship" type="checkbox" name="activities"> Internship</label>
+    <label for="job"><input value="job" type="checkbox" name="activities"> Job/Work</label>
+        <label for="volunteer"><input value="volunteer" type="checkbox" name="activities"> Volunteering</label>
+    <label for="traveling"><input value="traveling" type="checkbox" name="activities"> Traveling</label>
+    <label for="relaxing"><input value="relaxing" type="checkbox" name="activities"> Relaxing</label>
+    <label for="socializing"><input value="socializing" type="checkbox" name="activities"> Socializing</label>
+  </div>
+  <br></br>
+<label for="comments"> Write down any additional comments</label>
+  <div></div>
+<textarea id="comments" name="comments"
+          rows="8" cols="40">
+My summer is...
+</textarea>
+  <div></div>
+  <button id="submit">Submit</button>
+    </form>
+  </body>
+</html>
